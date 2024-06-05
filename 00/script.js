@@ -23,3 +23,31 @@ class Conta {
     }
 }
 
+class ContaCorrente extends Conta{
+    constructor(numero, saldo = 0, limiteChequeEspecial = 200) {
+        super(numero, saldo);
+        this.limiteChequeEspecial = limiteChequeEspecial;
+    }
+
+    sacar(valor) {
+        //super.sacar(valor);
+        const valorDisponivelSaque = this.saldo + this.limiteChequeEspecial;
+
+        if(valor > 0 && valorDisponivelSaque >= valor) {
+            this.saldo -= valor;
+        } else {
+            console.log("Saldo insuficiente");
+        }
+    }
+}
+
+class ContaPoupanca extends Conta{
+      // crie o construtor da conta poupança, com uma propriedade taxaRendimento.
+          // a taxa é por padrão 0.2
+     // crie uma função aplicarRendimento() que não precisa fazer nada por hora.
+}
+
+let contaC = new ContaCorrente(2001, 500);
+console.log(contaC.toString());
+contaC.sacar(650);
+console.log(contaC.toString());
