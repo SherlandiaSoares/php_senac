@@ -6,22 +6,16 @@
 4 - Utilize um loop foreach para percorrer o array de meses do ano e exibir cada um.
 5 - Conte quantos elementos o array de dias de semana possui.
 6 - Utilize a função array_serach() para econtrar a posicao do dia "Sábado" no array e exiba o resultado.
-
-?>
-
 */
 
 # 1
 $dias_da_semana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
-echo "1. O terceiro dia da semana é: " . $dias_da_semana[2];
+echo "1. O terceiro dia da semana é: " . $dias_da_semana[2] . "<br>";
 
-
-#2
-$meses_do_ano = ["Janeiro", "Julho", "Novembro", "Dezembro"];
+# 2
+$meses_do_ano = ["Janeiro", "Julho", "Agosto", "Novembro", "Dezembro"];
 $meses_do_ano[count($meses_do_ano) - 1] = "Onzembro";
 echo "O último mês do ano alterado para: " . end($meses_do_ano) . "<br>";
-
-
 
 # 3
 $numeros = [];
@@ -30,6 +24,7 @@ for($i = 1; $i <= 5; $i++) {
 }
 $numeros[] = 6;
 print_r($numeros);
+echo "<br>";
 
 # 4 
 foreach($meses_do_ano as $mes) {
@@ -42,7 +37,5 @@ echo "O array de dias da semana possui: " . count($dias_da_semana) . " dias <br>
 
 # 6
 $posicao_do_sabado = array_search("Sábado", $dias_da_semana);
-echo "A posição do dia de sábado no array é: $posicao_do_sabado"
-?>
-
+echo "A posição do dia de sábado no array é: $posicao_do_sabado";
 ?>
