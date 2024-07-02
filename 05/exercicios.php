@@ -220,5 +220,4 @@ $somaDigitos = array_sum($numeros_array);
 
 echo "A soma dos dígitos de $numeroSoma é: $somaDigitos";
 
-
 ?>
