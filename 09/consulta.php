@@ -12,7 +12,9 @@ try {
 
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    print_r($stmt);
+    echo '<pre>';
+    print_r($result);
+    echo '</pre>';
 } catch(PDOException $e) {
     echo "Erro ao se conectar ao banco: <br>";
     echo $e;
